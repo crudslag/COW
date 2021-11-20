@@ -1,5 +1,11 @@
-// cow.js
-// Created by CRUDSLAG.
+//
+//  COW.js
+//
+//  Created by CRUDSLAG.
+//
+//  WTFPL. Good Luck.
+
+const sleep = msec => new Promise(resolve => setTimeout(resolve, msec));
 
 window.onload = function() {
     next()
@@ -16,9 +22,17 @@ function run() {
     subscribe()
 }
 
-function subscribe() {
+async function subscribe() {
     console.log("subscribed!");
-    const video = document.querySelector("#modal-inner-iframe").contentDocument.querySelector("#video-player")
+    let video = null
+    for (let i = 0; i < 9; i++) {
+        video = document.querySelector("#modal-inner-iframe").contentDocument.querySelector("#video-player");
+        console.log(video)
+        if (video !== null) {
+            break;
+        }
+        await sleep(500);
+    }
     video.volume = 0;
     video.addEventListener("ended", function(){
 		console.log("DONE!");
