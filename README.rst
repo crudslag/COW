@@ -1,7 +1,7 @@
 CRUDSLAG-COW
 ===========
 
-| N予備校自動動画再生CHROME拡張機能。
+| complexity a decaying oligarchy can no longer maintain
 |
 
 - `学校関係者の方へ <https://kids.yahoo.co.jp/>`_ 
